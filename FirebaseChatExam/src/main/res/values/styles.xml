@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>               // Splash Screen이 pop up 될 때 위에 뜨는 action bar, window bar를
+                                                                        // 없앰
     </style>
-
 </resources>
