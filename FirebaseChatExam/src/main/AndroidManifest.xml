@@ -4,8 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/ic_start"           // 앱의 아이콘을 적당한 것으로 변경(디자인 수정)
+        android:label="양호"                         // 앱의 이름을 팀명으로 
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
