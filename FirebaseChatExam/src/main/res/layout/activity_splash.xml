@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/splashScreen"              // ImageView의 ID를 설정
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_start"            // 지정한 아이콘을 사용
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.82"/>
+
+</LinearLayout>
