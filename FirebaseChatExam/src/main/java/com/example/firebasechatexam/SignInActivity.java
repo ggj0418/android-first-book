@@ -98,6 +98,29 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                             Toast.makeText(SignInActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            try {
+                                if (user != null) {
+                                    for (UserInfo profile : user.getProviderData()) {
+                                        // Id of the provider (ex: google.com)
+                                        String providerId = profile.getProviderId();
+
+                                        // UID specific to the provider
+                                        String uid = profile.getUid();
+
+                                        // Name, email address, and profile photo Url
+                                        String name = profile.getDisplayName();
+                                        String email = profile.getEmail();
+                                        Uri photoUrl = profile.getPhotoUrl();
+
+                                        FriendList friendList = new FriendList(providerId, name, photoUrl);
+
+                                        mFirebaseDatabaseReference.child(providerId).setValue(friendList);
+                                    }
+                                }
+                            }catch (NullPointerException e) {
+                                e.printStackTrace();
+                            }
                             startActivity(new Intent(SignInActivity.this, MainActivity.class));
                             finish();
                         }
