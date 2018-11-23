@@ -183,12 +183,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 super.onItemRangeInserted(positionStart, itemCount);
                 int friendlyMessageCount = mFirebaseAdapter.getItemCount();
                 LinearLayoutManager layoutManager = (LinearLayoutManager) mMessageRecyclerView.getLayoutManager();
-                int lastVisiblePosition = layoutManager.findLastCompletelyVisibleItemPosition();
+                try {
+                    int lastVisiblePosition = layoutManager.findLastCompletelyVisibleItemPosition();
 
-                if (lastVisiblePosition == -1 ||
-                        (positionStart >= (friendlyMessageCount - 1) &&
-                                lastVisiblePosition == (positionStart - 1))) {
-                    mMessageRecyclerView.scrollToPosition(positionStart);
+                    if (lastVisiblePosition == -1 ||
+                            (positionStart >= (friendlyMessageCount - 1) &&
+                                    lastVisiblePosition == (positionStart - 1))) {
+                        mMessageRecyclerView.scrollToPosition(positionStart);
+                    }
+                } catch(NullPointerException e) {
+                    e.printStackTrace();
                 }
             }
         });
