@@ -6,14 +6,15 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.ggj04.sejongtalk.model.UserModel;
+import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -61,9 +62,10 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (email.getText().toString() == null || name.getText().toString() == null || password.getText().toString() == null || imageUri.toString() == null) {
+                if (email.getText().toString() == null || name.getText().toString() == null || password.getText().toString() == null || imageUri == null) {
                     return;
                 }
+
                 FirebaseAuth.getInstance()
                         .createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString())
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
@@ -71,30 +73,37 @@ public class SignupActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 final String uid = task.getResult().getUser().getUid();
                                 final StorageReference profileImageRef = FirebaseStorage.getInstance().getReference().child("userImages").child(uid);
-                                profileImageRef.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+
+                                profileImageRef.putFile(imageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                                     @Override
-                                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                                        @SuppressWarnings("VisibleForTests")
+                                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                                        if(!task.isSuccessful()) {
+                                            throw task.getException();
+                                        }
+                                        return profileImageRef.getDownloadUrl();
+                                    }
+                                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Uri> task) {
+                                        if(task.isSuccessful()) {
+                                            Uri downUri = task.getResult();
+                                            String imageUri = downUri.toString();
 
-                                        UserModel userModel = new UserModel();
-                                        userModel.userName = name.getText().toString();
-                                        userModel.profileImageUrl = profileImageRef.getDownloadUrl().toString();
+                                            UserModel userModel = new UserModel();
+                                            userModel.userName = name.getText().toString();
+                                            userModel.profileImageUrl = imageUri;
 
-
-                                        FirebaseDatabase.getInstance().getReference().child("users").child(uid).setValue(userModel).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                            @Override
-                                            public void onSuccess(Void aVoid) {
-                                                Intent intent = new Intent(SignupActivity.this,LoginActivity.class);
-                                                startActivity(intent);
-                                                SignupActivity.this.finish();
-                                            }
-                                        });
+                                            FirebaseDatabase.getInstance().getReference().child("users").child(uid).setValue(userModel).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Intent intent = new Intent(SignupActivity.this,LoginActivity.class);
+                                                    startActivity(intent);
+                                                    SignupActivity.this.finish();
+                                                }
+                                            });
+                                        }
                                     }
                                 });
-
-
-
-
                             }
                         });
 
