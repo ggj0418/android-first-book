@@ -81,6 +81,17 @@ public class PeopleFragment extends Fragment {
                         .apply(new RequestOptions().circleCrop())
                         .into(((CustomViewHolder) holder).imageView);
 
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(view.getContext(), MessageActivity.class);
+                        ActivityOptions activityOptions = null;
+                        activityOptions = ActivityOptions.makeCustomAnimation(view.getContext(), R.anim.fromright,R.anim.toleft);
+                        startActivity(intent,activityOptions.toBundle());
+
+                    }
+                });
+
             }catch (IllegalStateException e) {
                 e.printStackTrace();
             }
