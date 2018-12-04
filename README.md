@@ -11,5 +11,34 @@
 이 정도가 있으며 현재 다른 기능들도 추가 예정에 있습니다.
 
 -------------------------------------------------------------------------------------------------------------------------------------------
+구현 영상
+
 1. SplashScreen 구현
+
+
 ![title](/image/SplashScreen.gif)
+
+
+2. 회원가입 기능 구현
+
+![title](/image/signup.gif)
+
+3. 로그인 기능 구현
+
+![title](/image/login.gif)
+
+4. 채팅 기능 구현
+
+![title](/image/chat.gif)
+
+5. 학과정보 표시 기능 구현
+
+![title](/image/department.gif)
+
+6. 현재 사용자 정보 표시기능 구현
+
+![title](/image/currentUser.gif)
+
+7. 지도 기능 구현
+
+![title](/image/map.gif)
