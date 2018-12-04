@@ -39,7 +39,7 @@ public class CurrentUserFragment extends Fragment {
 
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
         
-        /*
+        
         mFirebaseDatabaseReference.child("users").child(uid).child("userName").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -83,7 +83,7 @@ public class CurrentUserFragment extends Fragment {
                 Log.e("onCancelled"," cancelled");
             }
         });
-        */
+        
         return view;
     }
 }
