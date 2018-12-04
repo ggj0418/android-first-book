@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_department"
+        android:icon="@drawable/ic_friend"
+        android:title="학과"/>
+
+    <item
+        android:id="@+id/action_school"
+        android:icon="@drawable/ic_school"
+        android:title="학교정보"/>
+
+    <item
+        android:id="@+id/action_account"
+        android:icon="@drawable/ic_account"
+        android:title="사용자 정보"/>
+</menu>
