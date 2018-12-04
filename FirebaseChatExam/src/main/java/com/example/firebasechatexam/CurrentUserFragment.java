@@ -39,51 +39,6 @@ public class CurrentUserFragment extends Fragment {
 
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
         
-        /*
-        mFirebaseDatabaseReference.child("users").child(uid).child("userName").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                try {
-                    if(dataSnapshot.getValue() != null) {
-                        try{
-                            mUsername = dataSnapshot.getValue().toString();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("onCancelled"," cancelled");
-            }
-        });
-
-        mFirebaseDatabaseReference.child("users").child(uid).child("profileImageUrl").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                try {
-                    if(dataSnapshot.getValue() != null) {
-                        try{
-                            mUserImage = dataSnapshot.getValue().toString();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("onCancelled"," cancelled");
-            }
-        });
-        */
         return view;
     }
 }
