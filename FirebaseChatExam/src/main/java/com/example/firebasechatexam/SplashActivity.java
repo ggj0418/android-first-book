@@ -23,6 +23,7 @@ public class SpalshActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spalsh);
+        // SplashScreen이 위에 액션바 없이 나오도록 설정
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         linearLayout = (LinearLayout)findViewById(R.id.splashactivity_linearlayout);
 
@@ -38,9 +39,7 @@ public class SpalshActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-
-                            // After config data is successfully fetched, it must be activated before newly fetched
-                            // values are returned.
+                            // RemoteConfig가 제대로 수행된 후, 앱에다 적용시키는 과정
                             mFirebaseRemoteConfig.activateFetched();
                         } else {
                         }
@@ -49,6 +48,7 @@ public class SpalshActivity extends AppCompatActivity {
                 });
     }
 
+    // SplashScreen과 같이 뜨는 메시지 
     void displayMessage() {
         String splash_background = mFirebaseRemoteConfig.getString("splash_background");
         boolean caps = mFirebaseRemoteConfig.getBoolean("splash_message_caps");
