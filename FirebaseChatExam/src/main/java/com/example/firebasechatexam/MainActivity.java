@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* 해시 키를 얻기 위해서 추가했다가 삭제함
+        /* Daum 지도를 쓰려고 했을 때 해시 키를 얻기 위해서 추가했다가 삭제함
         try{
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
             for (android.content.pm.Signature signature : info.signatures) {
