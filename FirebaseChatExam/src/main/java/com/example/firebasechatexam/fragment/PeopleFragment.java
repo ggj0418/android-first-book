@@ -1,6 +1,5 @@
-package com.example.ggj04.sejongtalk.fragment;
-
-import android.net.Uri;
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -14,18 +13,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ggj04.sejongtalk.R;
+import com.example.ggj04.sejongtalk.chat.MessageActivity;
 import com.example.ggj04.sejongtalk.model.UserModel;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class PeopleFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -34,35 +30,12 @@ public class PeopleFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(inflater.getContext()));
         recyclerView.setAdapter(new PeopleFragmentRecyclerViewAdapter());
 
-
         return view;
     }
 
     class PeopleFragmentRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         List<UserModel> userModels;
-
-        public PeopleFragmentRecyclerViewAdapter() {
-            userModels = new ArrayList<>();
-            FirebaseDatabase.getInstance().getReference().child("users").addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    userModels.clear();
-                    for(DataSnapshot snapshot :dataSnapshot.getChildren()){
-                        userModels.add(snapshot.getValue(UserModel.class));
-                    }
-                    notifyDataSetChanged();
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-
-
-        }
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -71,13 +44,12 @@ public class PeopleFragment extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
             try {
-                Uri imageUri = Uri.parse(userModels.get(position).profileImageUrl);
                 ((CustomViewHolder) holder).textView.setText(userModels.get(position).userName);
                 Glide
                         .with(((CustomViewHolder) holder).itemView.getContext())
-                        .load(imageUri)
+                        .load(userModels.get(position).profileImageUrl)
                         .apply(new RequestOptions().circleCrop())
                         .into(((CustomViewHolder) holder).imageView);
 
@@ -85,18 +57,16 @@ public class PeopleFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(view.getContext(), MessageActivity.class);
+                        intent.putExtra("departmentName", userModels.get(position).userName);
+                        // intent.putExtra("currentUserID", userID);
                         ActivityOptions activityOptions = null;
                         activityOptions = ActivityOptions.makeCustomAnimation(view.getContext(), R.anim.fromright,R.anim.toleft);
                         startActivity(intent,activityOptions.toBundle());
-
                     }
                 });
-
             }catch (IllegalStateException e) {
                 e.printStackTrace();
             }
-
-
         }
 
         @Override
