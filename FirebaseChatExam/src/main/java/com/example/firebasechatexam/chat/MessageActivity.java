@@ -34,6 +34,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MessageActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
+    // 메시지 틀을 가지고 있는 ChatModel과 MessageViewHolder를 가지고 Firebase과의 Adapter 생성
     private FirebaseRecyclerAdapter<ChatModel, MessageViewHolder> mFirebaseAdapter;
 
     private DatabaseReference mFirebaseDatabaseReference;
@@ -57,6 +58,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
 
+        // PeopleFragment에서 보낸 departmetName 값을 final 변수로 저장
         Intent intent = getIntent();
         final String departmentName = intent.getExtras().getString("departmentName");
 
@@ -68,6 +70,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
 
+        // 전송버튼 클릭 시 메시지 틀에 사용자가 보낸 메시지, 사용자 이름, 사용자 프로필사진을 담아서 데이터베이스에 저장하는 이벤트 생성
         findViewById(R.id.send_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,13 +84,15 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
             }
         });
 
+        // 사용자가 아닐 시 LoginActivity로 넘어감
         if(mFirebaseUser == null) {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
             return;
         } else {
+            // 사용자일 경우 데이터베이스에서 사용자의 프로필사진에 대한 정보를 가져옴
             String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-          mFirebaseDatabaseReference.child("users").child(uid).child("profileImageUrl").addValueEventListener(new ValueEventListener() {
+            mFirebaseDatabaseReference.child("users").child(uid).child("profileImageUrl").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     try {
@@ -112,6 +117,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
 
         }
 
+        // 실시간으로 데이터베이스에 저장된 메시지를 ChatModel이라는 틀에 담아서 MessageViewHolder로 띄워줌
         mFirebaseAdapter = new FirebaseRecyclerAdapter<ChatModel, MessageViewHolder>(options) {
             @Override
             protected void onBindViewHolder(MessageViewHolder holder, int position, ChatModel model) {
@@ -136,6 +142,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
             }
         };
 
+        // 새로운 메시지를 가장 밑에서부터 띄워주는 기능 수행
         mFirebaseAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
             public void onItemRangeInserted(int positionStart, int itemCount) {
