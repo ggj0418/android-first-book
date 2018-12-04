@@ -43,7 +43,8 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         profile = (ImageView)findViewById(R.id.signupActivity_imageview_profile);
-        profile.setOnClickListener(new View.OnClickListener() {
+        // 사진 등록 아이콘을 클릭하면 기기의 앨범에서 사진을 고르는 이벤트 생성
+        profile.setOnClickListener(new View.OnClickListener() {         
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_PICK);
@@ -57,23 +58,26 @@ public class SignupActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.signupActivity_edittext_password);
         signup = (Button) findViewById(R.id.signupActivity_button_signup);
 
-
+        // 회원가입 버튼을 눌렀을 때 데이터베이스에 정보를 기입하는 이벤트 생성
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // 입력창에 null 값이 있는지 확인
                 if (email.getText().toString() == null || name.getText().toString() == null || password.getText().toString() == null || imageUri == null) {
                     return;
                 }
 
                 FirebaseAuth.getInstance()
-                        .createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString())
+                        // 이메일과 비밀번호 기반의 계정 생성
+                        .createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString())       
                         .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
+                            // 계정이 성공적으로 생성되었을 때 데이터베이스에 사용자 정보를 입력하고 프로필 사진을 저장소에 저장하는 이벤트 생성
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 final String uid = task.getResult().getUser().getUid();
                                 final StorageReference profileImageRef = FirebaseStorage.getInstance().getReference().child("userImages").child(uid);
 
+                                // 저장소에 프로필 사진을 저장
                                 profileImageRef.putFile(imageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                                     @Override
                                     public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
@@ -82,6 +86,7 @@ public class SignupActivity extends AppCompatActivity {
                                         }
                                         return profileImageRef.getDownloadUrl();
                                     }
+                                // 데이터베이스에 사용자 정보(이름, 프로필사진 경로) 저장    
                                 }).addOnCompleteListener(new OnCompleteListener<Uri>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Uri> task) {
