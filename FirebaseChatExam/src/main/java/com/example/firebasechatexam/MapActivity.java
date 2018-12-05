@@ -27,4 +27,18 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
         mapFragment.getMapAsync(this);
     }
+
+    @UiThread
+    @Override
+    public void onMapReady(@NonNull NaverMap naverMap) {
+
+        LocationOverlay locationOverlay = naverMap.getLocationOverlay();
+        locationOverlay.setVisible(true);
+        locationOverlay.setIcon(LocationOverlay.DEFAULT_ICON);
+
+        Marker sejongMarker = new Marker();
+        sejongMarker.setPosition(new LatLng(37.550504, 127.073845));
+        sejongMarker.setCaptionText("세종대학교");
+
+    }
 }
