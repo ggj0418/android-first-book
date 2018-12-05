@@ -47,4 +47,4 @@
 
 데이터베이스 구조
 
-![title](/image/)
+![title](/image/database.PNG)
