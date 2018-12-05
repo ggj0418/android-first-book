@@ -94,7 +94,7 @@ public class PeopleFragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(view.getContext(), MessageActivity.class);
-                        // 해당 학과이름 하위의 데이터베이스에 메시지 데이터 그룹을 생성하기 위해 변수값 
+                        // 해당 학과이름 하위의 데이터베이스에 메시지 데이터 그룹을 생성하기 위해 변수 departmentName을 
                         intent.putExtra("departmentName", userModels.get(position).userName);                       
                         ActivityOptions activityOptions = null;
                         activityOptions = ActivityOptions.makeCustomAnimation(view.getContext(), R.anim.fromright,R.anim.toleft);
