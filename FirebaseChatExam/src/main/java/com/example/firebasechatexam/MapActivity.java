@@ -11,7 +11,7 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.overlay.LocationOverlay;
 import com.naver.maps.map.overlay.Marker;
 
-// 네이버지도를 생성하기 위한 기본 MapActivity 
+// 네이버지도를 생성하기 위한 기본 MapActivity 생성
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onCreate(Bundle savedInstanceState) {
