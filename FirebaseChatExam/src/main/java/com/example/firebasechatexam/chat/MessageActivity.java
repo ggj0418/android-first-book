@@ -52,6 +52,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
 
     }
 
+    // 메시지를 담을 수 있는 MessageViewHolder 생성
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
         TextView nameTextView;
         TextView messageTextView;
@@ -73,6 +74,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
 
+        // PeopleFragment로부터 받은 변수 departmentName을 저장
         Intent intent = getIntent();
         final String departmentName = intent.getExtras().getString("departmentName");
 
@@ -84,6 +86,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
 
+        // 전송버튼 누를 시 메시지를 데이터베이스에 저장하는 이벤트 생성
         findViewById(R.id.send_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,11 +100,13 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
             }
         });
 
+        // 사용자 정보가 없으면 로그인 페이지로 이동
         if(mFirebaseUser == null) {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
             return;
         } else {
+            // 사용자 정보가 있으면 해당 사용자의 데이터베이스에서 사용자 이름 얻어오기
             String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
             mFirebaseDatabaseReference.child("users").child(uid).child("userName").addValueEventListener(new ValueEventListener() {
                 @Override
@@ -125,6 +130,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
                 }
             });
 
+            // 현재 사용자의 데이터베이스에서 프로필 사진의 URL 얻어오기
             mFirebaseDatabaseReference.child("users").child(uid).child("profileImageUrl").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -150,11 +156,13 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
 
         }
 
+        // 데이터베이스의 messages->학과명 위치를 참조하는 Query를 생성
         Query query = mFirebaseDatabaseReference.child("messages").child(departmentName);
         FirebaseRecyclerOptions<ChatModel> options = new FirebaseRecyclerOptions.Builder<ChatModel>()
                 .setQuery(query, ChatModel.class)
                 .build();
 
+        // BindViewHolder에 사용자가 보낸 메시지, 이름, 사진을 등록
         mFirebaseAdapter = new FirebaseRecyclerAdapter<ChatModel, MessageViewHolder>(options) {
             @Override
             protected void onBindViewHolder(MessageViewHolder holder, int position, ChatModel model) {
@@ -179,6 +187,7 @@ public class MessageActivity extends AppCompatActivity implements GoogleApiClien
             }
         };
 
+        // 메시지가 새로 등록되면 해당 메시지를 밑에서부터 밀어넣기
         mFirebaseAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
             public void onItemRangeInserted(int positionStart, int itemCount) {
