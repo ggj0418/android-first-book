@@ -40,5 +40,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         sejongMarker.setPosition(new LatLng(37.550504, 127.073845));
         sejongMarker.setCaptionText("세종대학교");
 
+        CameraUpdate cameraUpdate = CameraUpdate.scrollAndZoomTo(new LatLng(37.550504, 127.073845),15);
+
+        sejongMarker.setMap(naverMap);
+        naverMap.moveCamera(cameraUpdate);
+        naverMap.setMinZoom(5.0);
+        naverMap.setMaxZoom(18.0);
     }
 }
