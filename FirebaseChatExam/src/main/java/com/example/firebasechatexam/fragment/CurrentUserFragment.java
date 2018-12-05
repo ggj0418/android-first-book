@@ -1,3 +1,5 @@
+package com.example.ggj04.sejongtalk.fragment;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -38,52 +40,34 @@ public class CurrentUserFragment extends Fragment {
         mUserEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();
 
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
-        
-        
-        mFirebaseDatabaseReference.child("users").child(uid).child("userName").addListenerForSingleValueEvent(new ValueEventListener() {
+        mFirebaseDatabaseReference.child("users").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                CurrentUserModel currentUserModel = dataSnapshot.getValue(CurrentUserModel.class);
                 try {
-                    if(dataSnapshot.getValue() != null) {
-                        try{
-                            mUsername = dataSnapshot.getValue().toString();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }catch (Exception e) {
+                    ImageView imageView = (ImageView) view.findViewById(R.id.account_imageView);
+                    TextView userName = (TextView) view.findViewById(R.id.userNameinDatabase);
+                    TextView userEmail = (TextView) view.findViewById(R.id.userEmailinDatabase);
+
+                    userEmail.setText(mUserEmail);
+                    userName.setText(currentUserModel.userName);
+
+                    Glide
+                            .with(getActivity())
+                            .load(currentUserModel.profileImageUrl)
+                            .apply(new RequestOptions().circleCrop())
+                            .into(imageView);
+
+                }catch(NullPointerException e) {
                     e.printStackTrace();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("onCancelled"," cancelled");
+                Log.w(TAG, "getUser:onCancelled", databaseError.toException());
             }
         });
-
-        mFirebaseDatabaseReference.child("users").child(uid).child("profileImageUrl").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                try {
-                    if(dataSnapshot.getValue() != null) {
-                        try{
-                            mUserImage = dataSnapshot.getValue().toString();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("onCancelled"," cancelled");
-            }
-        });
-        
         return view;
     }
 }
