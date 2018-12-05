@@ -71,7 +71,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void test(){
-        //this is test;
-    }
 }

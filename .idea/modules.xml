@@ -2,7 +2,50 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ActionSendExam/ActionSendExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ActionSendExam/ActionSendExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ActivityExam/ActivityExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ActivityExam/ActivityExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdapterViewExam/AdapterViewExam.iml" filepath="$PROJECT_DIR$/.idea/modules/AdapterViewExam/AdapterViewExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AlarmManagerExam/AlarmManagerExam.iml" filepath="$PROJECT_DIR$/.idea/modules/AlarmManagerExam/AlarmManagerExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BadThreadExam/BadThreadExam.iml" filepath="$PROJECT_DIR$/.idea/modules/BadThreadExam/BadThreadExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BroadcastReceiverExam/BroadcastReceiverExam.iml" filepath="$PROJECT_DIR$/.idea/modules/BroadcastReceiverExam/BroadcastReceiverExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CallbackExam/CallbackExam.iml" filepath="$PROJECT_DIR$/.idea/modules/CallbackExam/CallbackExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CountDownExam/CountDownExam.iml" filepath="$PROJECT_DIR$/.idea/modules/CountDownExam/CountDownExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CursorAdapterExam/CursorAdapterExam.iml" filepath="$PROJECT_DIR$/.idea/modules/CursorAdapterExam/CursorAdapterExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DatabaseExam/DatabaseExam.iml" filepath="$PROJECT_DIR$/.idea/modules/DatabaseExam/DatabaseExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DebugExam/DebugExam.iml" filepath="$PROJECT_DIR$/.idea/modules/DebugExam/DebugExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DynamicUIExam/DynamicUIExam.iml" filepath="$PROJECT_DIR$/.idea/modules/DynamicUIExam/DynamicUIExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EventExam/EventExam.iml" filepath="$PROJECT_DIR$/.idea/modules/EventExam/EventExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FirebaseChatExam/FirebaseChatExam.iml" filepath="$PROJECT_DIR$/.idea/modules/FirebaseChatExam/FirebaseChatExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FragmentExam/FragmentExam.iml" filepath="$PROJECT_DIR$/.idea/modules/FragmentExam/FragmentExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HttpNetworkExam/HttpNetworkExam.iml" filepath="$PROJECT_DIR$/.idea/modules/HttpNetworkExam/HttpNetworkExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ImplicitIntentExam/ImplicitIntentExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ImplicitIntentExam/ImplicitIntentExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LifeCycleExam/LifeCycleExam.iml" filepath="$PROJECT_DIR$/.idea/modules/LifeCycleExam/LifeCycleExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LocalizationExam/LocalizationExam.iml" filepath="$PROJECT_DIR$/.idea/modules/LocalizationExam/LocalizationExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LoginExam/LoginExam.iml" filepath="$PROJECT_DIR$/.idea/modules/LoginExam/LoginExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MapExam/MapExam.iml" filepath="$PROJECT_DIR$/.idea/modules/MapExam/MapExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MenuExam/MenuExam.iml" filepath="$PROJECT_DIR$/.idea/modules/MenuExam/MenuExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyFirstApp/MyFirstApp.iml" filepath="$PROJECT_DIR$/.idea/modules/MyFirstApp/MyFirstApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NavigationDrawerExam/NavigationDrawerExam.iml" filepath="$PROJECT_DIR$/.idea/modules/NavigationDrawerExam/NavigationDrawerExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NinePatchExam/NinePatchExam.iml" filepath="$PROJECT_DIR$/.idea/modules/NinePatchExam/NinePatchExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NotificationExam/NotificationExam.iml" filepath="$PROJECT_DIR$/.idea/modules/NotificationExam/NotificationExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OkHttpExam/OkHttpExam.iml" filepath="$PROJECT_DIR$/.idea/modules/OkHttpExam/OkHttpExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PackageManagerExam/PackageManagerExam.iml" filepath="$PROJECT_DIR$/.idea/modules/PackageManagerExam/PackageManagerExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/QuickDustInfo/QuickDustInfo.iml" filepath="$PROJECT_DIR$/.idea/modules/QuickDustInfo/QuickDustInfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RealmDbExam/RealmDbExam.iml" filepath="$PROJECT_DIR$/.idea/modules/RealmDbExam/RealmDbExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RecyclerViewExam/RecyclerViewExam.iml" filepath="$PROJECT_DIR$/.idea/modules/RecyclerViewExam/RecyclerViewExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScreenSlideExam/ScreenSlideExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ScreenSlideExam/ScreenSlideExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScrollExam/ScrollExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ScrollExam/ScrollExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ServiceExam/ServiceExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ServiceExam/ServiceExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StyleExam/StyleExam.iml" filepath="$PROJECT_DIR$/.idea/modules/StyleExam/StyleExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SwipeRefreshLayoutExam/SwipeRefreshLayoutExam.iml" filepath="$PROJECT_DIR$/.idea/modules/SwipeRefreshLayoutExam/SwipeRefreshLayoutExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestExam/TestExam.iml" filepath="$PROJECT_DIR$/.idea/modules/TestExam/TestExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ThreadExam/ThreadExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ThreadExam/ThreadExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ToolbarExam/ToolbarExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ToolbarExam/ToolbarExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UpNavigationExam/UpNavigationExam.iml" filepath="$PROJECT_DIR$/.idea/modules/UpNavigationExam/UpNavigationExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ViewExam/ViewExam.iml" filepath="$PROJECT_DIR$/.idea/modules/ViewExam/ViewExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebViewExam/WebViewExam.iml" filepath="$PROJECT_DIR$/.idea/modules/WebViewExam/WebViewExam.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-first-book.iml" filepath="$PROJECT_DIR$/android-first-book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intentfilterexam/intentfilterexam.iml" filepath="$PROJECT_DIR$/.idea/modules/intentfilterexam/intentfilterexam.iml" />
     </modules>
   </component>
 </project>

@@ -5,6 +5,54 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ActionSendExam" />
+            <option value="$PROJECT_DIR$/ActivityExam" />
+            <option value="$PROJECT_DIR$/AdapterViewExam" />
+            <option value="$PROJECT_DIR$/AlarmManagerExam" />
+            <option value="$PROJECT_DIR$/BadThreadExam" />
+            <option value="$PROJECT_DIR$/BroadcastReceiverExam" />
+            <option value="$PROJECT_DIR$/CallbackExam" />
+            <option value="$PROJECT_DIR$/CountDownExam" />
+            <option value="$PROJECT_DIR$/CursorAdapterExam" />
+            <option value="$PROJECT_DIR$/DatabaseExam" />
+            <option value="$PROJECT_DIR$/DebugExam" />
+            <option value="$PROJECT_DIR$/DynamicUIExam" />
+            <option value="$PROJECT_DIR$/EventExam" />
+            <option value="$PROJECT_DIR$/FirebaseChatExam" />
+            <option value="$PROJECT_DIR$/FragmentExam" />
+            <option value="$PROJECT_DIR$/HttpNetworkExam" />
+            <option value="$PROJECT_DIR$/ImplicitIntentExam" />
+            <option value="$PROJECT_DIR$/LifeCycleExam" />
+            <option value="$PROJECT_DIR$/LocalizationExam" />
+            <option value="$PROJECT_DIR$/LoginExam" />
+            <option value="$PROJECT_DIR$/MapExam" />
+            <option value="$PROJECT_DIR$/MenuExam" />
+            <option value="$PROJECT_DIR$/MyFirstApp" />
+            <option value="$PROJECT_DIR$/NavigationDrawerExam" />
+            <option value="$PROJECT_DIR$/NinePatchExam" />
+            <option value="$PROJECT_DIR$/NotificationExam" />
+            <option value="$PROJECT_DIR$/OkHttpExam" />
+            <option value="$PROJECT_DIR$/PackageManagerExam" />
+            <option value="$PROJECT_DIR$/QuickDustInfo" />
+            <option value="$PROJECT_DIR$/RealmDbExam" />
+            <option value="$PROJECT_DIR$/RecyclerViewExam" />
+            <option value="$PROJECT_DIR$/ScreenSlideExam" />
+            <option value="$PROJECT_DIR$/ScrollExam" />
+            <option value="$PROJECT_DIR$/ServiceExam" />
+            <option value="$PROJECT_DIR$/StyleExam" />
+            <option value="$PROJECT_DIR$/SwipeRefreshLayoutExam" />
+            <option value="$PROJECT_DIR$/TestExam" />
+            <option value="$PROJECT_DIR$/ThreadExam" />
+            <option value="$PROJECT_DIR$/ToolbarExam" />
+            <option value="$PROJECT_DIR$/UpNavigationExam" />
+            <option value="$PROJECT_DIR$/ViewExam" />
+            <option value="$PROJECT_DIR$/WebViewExam" />
+            <option value="$PROJECT_DIR$/intentfilterexam" />
+          </set>
+        </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
