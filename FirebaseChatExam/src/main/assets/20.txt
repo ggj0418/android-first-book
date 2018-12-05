@@ -1,0 +1,203 @@
+﻿<html>   
+   <div id="content">
+      <div class="img_top top12_img04">
+         <p>창의적인 데이터 분석 및 소프트웨어 개발 능력을 가진 인재의 양성</p>
+         <hr>
+         <dl>
+         <dt>데이터사이언스학과 조교실</dt>
+         <dd>
+            <ul>
+            <li>위치 : <strong>군자관 102호</strong></li>
+            <li>전화 : <strong>02-6935-2544</strong></li></ul>
+         </dd>
+         </dl>
+      </div>
+      <ul class="tab_line2">
+      </ul>
+      <h4>전공소개</h4>
+      <p class="atl h4left">21세기는 데이터 기술의 시대라고 할 정도로 사회적으로 데이터 기술 전문가에 대한 수요가 점증하고 있다. 따라서 본 대학의 창학 이념인 덕성, 창의, 봉사, 실천을 기본 정신으로 하여, 국가의 첨단산업 발전과 데이터 과학 기술 개발에 이바지하는 창의적이고 분석력이 높은 데이터 전문 기술 인력을 양성하는 것을 교육 목표로 한다. 특히 소프트웨어 개발이 가능한 데이터전문가는 공급에 비해 수요가 턱없이 부족한 실정이다. 이러한 환경에서 교육 목표를 달성하기 위하여 본 학과에서는 데이터 분석을 다루는 소프트웨어 분야 및 대용량 고속 데이터 분석을 위한 하드웨어 분야에 대하여 기본적이면서 포괄적인 지식 습득 및 이를 데이터 분석에 응용하는 능력 배양에 중점을 둔 교육 과정을 제공한다. 학습하는 과목은 컴퓨터의 핵심 과목과 데이터분석의 기초가 되는 통계학, 데이터수집, 분석, 시각화, 데이터고속처리 기술, 알파고의 핵심기술인 기계학습 등이 포함된다. 데이터 분석에 대한 수요가 급속히 확대되고 있고 SW 개발 및 분석에 대한 인력 수요가 급증하고 있어, 졸업 후에도 다양한 산업계 및 과학 기술 분야로의 진출이 용이한 첨단 융합 학과이다.</p>
+      <h4>교육목표</h4>
+      <ul class="h4left">
+      <li>① 창의적인 데이터 분석 및 소프트웨어 개발 능력을 가진 인재의 양성</li>
+      <li>② 다양한 분석 능력을 바탕으로 산업현장에서 필요로 하는 전문적인 실무능력을 갖춘 인재의 양성</li>
+      <li>③ 기초 소양 및 데이터 분석에 요구되는 상황 인지 및 지식 전달 능력을 보유한 인재의 양성</li>
+      <li>④ 국제 감각 및 올바른 직업윤리 의식을 가지고 있는 인재의 양성</li>
+      </ul>
+      <h4>전공목표 및 진로</h4>
+      <p class="atl h4left">데이터사이언스학과는 2017년에 신설되는 학과로서 데이터 기술 전문가를 양성하는 것에 초점을 두어 특화된 교과목을 학습한다. 최근 데이터 분석의 수요가 급증하고 컴퓨터 시스템의 발달로 대용량의 데이터 수집 및 저장을 하지만 이를 올바르게 처리, 분석하는 전문가가 상당히 부족하여 사회 및 산업계에서 필요로 하는 인력 수요가 많다. 따라서 데이터사이언스학과에서는 데이터 수집, 저장, 처리, 분석하는 전문가를 양성하는 교육과정을 제공하고 이를 학습한 인재들은 사회 및 산업계의 다양한 분야에 진출하여 데이터 기술 전문가로 활동하고 데이터 분석에 능력을 발휘할 수 있게 된다. 데이터사이언스학과는 SW융합대학 내에 있는 학과로서 기본적인 컴퓨터공학 교과목을 대부분 이수하게 되며 이에 더해 경영, 통계 등 산업계에서 수요가 있는 특화된 교과목을 학습하여 향후 빅데이터 전문가, 금융 정보 데이터 전문가, 데이터 기반 인공지능 전문가 등의 진로로 진출할 수 있게 된다.</p>
+      </ul>
+   </div>
+   <div class="img_top top12_img04">
+         <p>창의적인 데이터 분석 및 소프트웨어 개발 능력을 가진 인재의 양성</p>
+         <hr>
+         <dl>
+            <dt>데이터사이언스학과 교수</dt>
+         </dl>
+      </div>
+      <div class="prof_list">
+         <ul>
+            <li>
+               <h4 class="small9">김원일</h4>
+               <dl>
+                  <dd>교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 인공지능</dd>
+                  <dd>학사 : Southern Illinois U. 전산학</dd>
+                  <dd>석사 : Southern Illinois U. 전산학</dd>
+                  <dd>박사 : Syracuse U. 전산학</dd>
+                  <dd>최종학위 : 공학박사(Syracuse U.)</dd>
+                  <dd>연구실 위치 : 율곡관 203C호</dd>
+                  <dd>연구실 전화 : 02)3408 - 3795</dd>
+                  <dd>공동소속 : 전자정보공학대학 정보보호학과</dd>
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">노재춘</h4>
+               <dl>
+                  <dd>교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 시스템공학</dd>
+                  <dd>학사 : 이화여대 전산학</dd>
+                  <dd>석사 : Western Illinois U. Computer Science</dd>
+                  <dd>박사 : Syracuse U. Computer Science</dd>
+                  <dd>최종학위 : 공학박사(Syracuse U.)</dd>
+                  <dd>연구실 위치 : 율곡관 502B호</dd>
+                  <dd>연구실 전화 : 02)3408 - 3747</dd>
+                  <dd>공동소속 : 전자정보공학대학 정보보호학과</dd>
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">백성욱</h4>
+               <dl>
+                  <dd>교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 컴퓨터비전</dd>
+                  <dd>학사 : 서울대 계산통계</dd>
+                  <dd>석사 : Northern Illinois U. 전산</dd>
+                  <dd>박사 : George Mason U. 정보기술</dd>
+                  <dd>최종학위 : 공학박사(George Mason U.)</dd>
+                  <dd>연구실 위치 : 율곡관 601B호</dd>
+                  <dd>연구실 전화 : 02)3408 - 3797</dd>
+               </dl>
+            </li>
+            <li>
+            <li>
+               <h4 class="small9">유성준</h4>
+               <dl>
+                  <dd>교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 데이타베이스</dd>
+                  <dd>학사 : 고려대 전자공학</dd>
+                  <dd>석사 : 고려대 전자공학</dd>
+                  <dd>박사 : Syracuse U. 전산학</dd>
+                  <dd>최종학위 : 공학박사(Syracuse U.)</dd>
+                  <dd>연구실 위치 : 율곡관 402B호</dd>
+                  <dd>연구실 전화 : 02)3408 - 3755</dd>
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">김경중</h4>
+               <dl>
+                  <dd>부교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 인공지능</dd>
+                  <dd>학사 : 연세대 컴퓨터과학</dd>
+                  <dd>석사 : 연세대 컴퓨터과학</dd>
+                  <dd>박사 : 연세대 컴퓨터과학</dd>
+                  <dd>최종학위 : 공학박사(연세대)</dd>
+                  <dd>연구실 위치 : 광개토관 619호</dd>
+                  <dd>연구실 전화 : 02)3408 - 3838</dd>
+                  <dd>공동소속 : 전자정보공학대학 정보보호학과</dd>
+               </dl>
+            </li>                     
+            <li>
+               <h4 class="small9">장윤</h4>
+               <dl>
+                  <dd>부교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 데이타시각화</dd>
+                  <dd>학사 : 서울대 (전기공학부)</dd>
+                  <dd>석사 : Purdue Univ.(ECE)</dd>
+                  <dd>박사 : Purdue Univ.(ECE)</dd>
+                  <dd>최종학위 : 공학박사(Purdue U.)</dd>
+                  <dd>연구실 위치 : 광개토관 1012B호</dd>
+                  <dd>연구실 전화 : 02)3408 - 3756</dd>
+                  <dd>공동소속 : 전자정보공학대학 정보보호학과</dd>
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">곽진태</h4>
+               <dl>
+                  <dd>조교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 의료영상 분석</dd>
+                  <dd>학사 : 고려대(전지전자전파공학)</dd>
+                  <dd>석사 : Purdue U.(Electrical andComputer Eng.)</dd>
+                  <dd>박사 : U. of Illinois at Urbana-Champaign(Computer Science)</dd>
+                  <dd>최종학위 : 공학박사(U. of Illinois at Urbana-Champaign)</dd>
+                  <dd>연구실 위치 : 영실관 317</dd>
+                  <dd>연구실 전화 : 02)6935 - 2492</dd>
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">최준연</h4>
+               <dl>
+                  <dd>조교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 정보시스템</dd>
+                  <dd>학사 : KAIST 전기 및 전자공학</dd>
+                  <dd>석사 : KAIST 경영공학</dd>
+                  <dd>박사 : KAIST 경영공학</dd>
+                  <dd>최종학위 : 공학박사(KAIST)</dd>
+                  <dd>연구실 위치 : 충무관 1125호</dd>
+                  <dd>연구실 전화 : 02)3408 - 3887</dd>
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">조윤식</h4>
+               <dl>
+                  <dd>조교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : Electrical Engineering</dd>
+                  <dd>학사 : 서울대 전기공학부</dd>
+                  <dd>석사 : U. of Southern Callifonia Electrical Engineering</dd>
+                  <dd>박사 : U. of Southern Callifonia Electrical Engineering</dd>
+                  <dd>최종학위 : 공학박사(U. of Southern Califonia)</dd>
+                  <dd>연구실 위치 : 광개토관 409호</dd>
+                  <dd>연구실 전화 : 02-6935-2550</dd>
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">송재욱</h4>
+               <dl>
+                  <dd>조교수 : 데이터사이언스학과</dd>
+                  <dd>전공 : 금융공학/경영과학</dd>
+                  <dd>학사 : Georgia Tech Industrial Engineering</dd>
+                  <dd>석사 : 서울대 산업공학</dd>
+                  <dd>박사 : U. of Southern Callifonia Electrical Engineering</dd>
+                  <dd>최종학위 : 공학박사(서울대)</dd>
+                  <dd>연구실 위치 : 새날관 101호</dd>
+                  <dd>연구실 전화 : 02-6935-2438</dd>
+               </dl>
+            </li>
+         </ul>
+      </div>
+      <div class="img_top top01_img02">
+         <hr>
+         <dl>
+            <dt>수강 과목</dt>
+         </dl>
+      </div>
+      <div class="subject_list">
+         <ul>
+            <li>
+               <h4 class="small9">1학년</h4>
+               <dl>
+                  <dd>고급C프로그래밍및실습 / 전필</dd>
+                  <dd>공학설계기초 / 전필</dd>   
+               </dl>
+            </li>
+            <li>
+               <h4 class="small9">2학년</h4>
+               <dl>                  
+                  <dd>알고리즘및실습 / 전필</dd>
+                  <dd>수치해석 / 전선</dd>               
+                  <dd>문제해결및실습:JAVA / 전선</dd> 
+                  <dd>선형대수및프로그래밍 / 전선</dd>
+              </dl>
+            </li>         
+         </ul>
+      </div>
+   </div>
+</html>
