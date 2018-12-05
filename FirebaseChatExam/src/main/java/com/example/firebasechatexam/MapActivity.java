@@ -20,5 +20,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         setContentView(R.layout.activity_map);
 
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+        if (mapFragment == null) {
+            mapFragment = MapFragment.newInstance();
+            getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+        }
+
+        mapFragment.getMapAsync(this);
     }
 }
