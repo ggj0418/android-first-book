@@ -54,7 +54,7 @@ public class CurrentUserFragment extends Fragment {
                     userEmail.setText(mUserEmail);
                     userName.setText(currentUserModel.userName);
 
-                    // 이미지 불러와서 이미지뷰에 
+                    // 이미지 불러와서 이미지뷰에 띄우기
                     Glide
                             .with(getActivity())
                             .load(currentUserModel.profileImageUrl)
