@@ -32,6 +32,7 @@ public class CurrentUserFragment extends Fragment {
 
     @Nullable
     @Override
+    // fragment View 생성
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_account, container, false);
@@ -40,6 +41,7 @@ public class CurrentUserFragment extends Fragment {
         mUserEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail().toString();
 
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        // Firebase의 데이터베이스를 참조해서 값 읽어오기
         mFirebaseDatabaseReference.child("users").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -52,6 +54,7 @@ public class CurrentUserFragment extends Fragment {
                     userEmail.setText(mUserEmail);
                     userName.setText(currentUserModel.userName);
 
+                    // 이미지 불러와서 이미지뷰에 
                     Glide
                             .with(getActivity())
                             .load(currentUserModel.profileImageUrl)
